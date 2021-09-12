@@ -2,6 +2,8 @@
 
 1. Dump from iPhone using **Image Capture.app**
 
+1. **Optional** [lowercase all extensions](./lowercase-extensions.md)
+
 1. [Tag original filenames into metadata](./preserve-filename.md)
 
 1. [Rename the files into a date based format](./rename-files.md)
