@@ -9,7 +9,7 @@ The following command renames all `.heic` (Apple), `.jpg` (JPEG)`.mov` (Apple) a
 iPhone correctly uses [EXIF](https://exiftool.org/TagNames/EXIF.html) `DateTimeOriginal`.
 
 ```shell
-exiftool -overwrite_original -preserve '-filename<DateTimeOriginal' -d %Y-%m-%d_%H%M_%S%%+c.%%le -r -ext heic -ext jpg /Users/lantrix/Pictures/_temp
+exiftool -overwrite_original -preserve '-filename<DateTimeOriginal' -d %Y-%m-%d_%H%M_%S%%+c.%%le -ext heic -ext jpg -r /Users/lantrix/Pictures/_temp
 ```
 
 ### iPhone Movies
@@ -17,14 +17,14 @@ exiftool -overwrite_original -preserve '-filename<DateTimeOriginal' -d %Y-%m-%d_
 iPhone movie files uses [QuickTime](https://exiftool.org/TagNames/QuickTime.html) Keys Tag `CreationDate`.
 
 ```shell
-exiftool -overwrite_original -preserve '-filename<CreationDate' -d %Y-%m-%d_%H%M_%S%%+c.%%le -r -ext mov /Users/lantrix/Pictures/_temp
+exiftool -overwrite_original -preserve '-filename<CreationDate' -d %Y-%m-%d_%H%M_%S%%+c.%%le -ext mov -r /Users/lantrix/Pictures/_temp
 ```
 
 ### Other Movies
 
 Other movie files exported use [QuickTime](https://exiftool.org/TagNames/QuickTime.html) MovieHeader Tag `CreateDate`.
 ```shell
-exiftool -overwrite_original -preserve '-filename<CreateDate' -d %Y-%m-%d_%H%M_%S%%+c.%%le -r -ext mp4 /Users/lantrix/Pictures/_temp
+exiftool -overwrite_original -preserve '-filename<CreateDate' -d %Y-%m-%d_%H%M_%S%%+c.%%le -ext mp4 -r /Users/lantrix/Pictures/_temp
 ```
 
 ## Details
